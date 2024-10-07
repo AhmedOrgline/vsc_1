@@ -1,0 +1,132 @@
+*{
+    transition: 0.5s !important;
+}
+:root{
+    --bg-color : #ddd;
+}
+.bg-dark{
+    --bg-color : #666;
+}
+.container{
+    position: relative;
+}
+article{
+    opacity: 0;
+    transition: 0.5s;
+}
+@media (max-width:576px) {
+    .form{
+        flex-direction: column;
+        align-items: flex-start;
+        button{
+            margin-top: 5px;
+        }
+    }
+}
+.none{
+    display: none;
+}
+.Yes{
+    display: inline-block;
+}
+section{
+    opacity: 0;
+    padding-top: 200px;
+}
+.section{
+    opacity: 1;
+    padding-top: 0;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 2px;
+    .component{
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-width:992px) {
+    .none{
+        display: inline-block;
+    }
+    .Yes{
+        display: none;
+    }
+    .box{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+}
+@media (max-width:992px) {
+    .head{
+        font-size: 30px !important;
+    }
+}
+.box_2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    div{
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 10px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 0.5s;
+        img{
+            width: 75px;
+        }
+        &:hover{
+            opacity: 1;
+            border-color: #8a8a8a;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .box_2{
+        margin-top: 50px;
+    }
+}
+.comp{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:15px;
+    i{
+        background-color: var(--bg-color) !important;
+        font-size: 20px;
+        color: #3794ff;
+        margin-bottom: 25px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+.footer{
+    span{
+        transition: 0.5s;
+        color: #999;
+    &:hover{
+        color: #000 !important;
+    }
+}
+}
+@media (max-width:768px) {
+    .comp{
+        grid-template-columns:1fr;
+    }
+    .footer{
+        text-align: center;
+    }
+}
+/* ======= */
+@keyframes display_head {
+    0%{
+        opacity: 0 !important;
+        transform: translateY(100px);
+    }100%{
+        opacity: 1 !important;
+        transform: translateY(0px);
+    }
+}
